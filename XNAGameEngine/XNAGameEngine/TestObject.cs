@@ -15,6 +15,7 @@ namespace XNAGameEngine
         private Sprite _sprite;
         private Animation _animation;
         private GameObject _go;
+        private Rectangle _dr;
 
         private Vector2 _position;
         
@@ -22,13 +23,14 @@ namespace XNAGameEngine
         {
             _go = gameObject;
             _sprite = new Sprite(_go, "Assets/asteroid");
-            _animation = new Animation(_go, new Vector2(8, 0));
-            _position = new Vector2(100, 100);
+            _animation = new Animation(new Vector2(8, 4), _sprite);
+            _position = new Vector2(200, 200);
         }
 
-        public void Update()
+        public void Update(GameTime time)
         {
-            _animation.AnimateFrame(30, _sprite);
+            _dr = _animation.AnimateFrame(300, time, _sprite);
+            _sprite.SetRect(_dr);
         }
 
         public void Draw()

@@ -29,7 +29,7 @@ namespace XNAGameEngine
         public Vector2 pivot { get { return _pivot; } set { _pivot = value; } }
         public Single scale { get { return _scale; } set { _scale = value; } }
         public Rectangle sourceRect { get { return _sourceRect; } set { _sourceRect = value; } }
-        public Texture2D tecture { get { return _texture; } }
+        public Texture2D texture { get { return _texture; } }
         public Color tint { get { return _tint; } set { _tint = value; } }
         public Single layer { get { return _layer; } set { _layer = value; } }
         #endregion
@@ -56,6 +56,11 @@ namespace XNAGameEngine
             _sourceRect.Y = 0;
             _sourceRect.Width = _texture.Width;
             _sourceRect.Height = _texture.Height;
+        }
+
+        public void SetRect(Rectangle rect)
+        {
+            _sourceRect = rect;
         }
         #endregion
 

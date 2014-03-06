@@ -75,7 +75,7 @@ namespace XNAGameEngine
                 this.Exit();
 
             // TODO: Add your update logic here
-
+            tester.Update(gameTime);
             base.Update(gameTime);
         }
 

@@ -17,40 +17,39 @@ namespace XNAGameEngine
         private Vector2 _numFrames;
         private int _frameCounter;
         private int _switchFrame;
-        private Texture2D _sprite;
-        private GameObject _gameObject;
+        private Sprite _sprite;
+        private Rectangle _dr;
         #endregion
 
         #region Public Accessors
         public Vector2 currentFrame { get { return _currentFrame; } set { _currentFrame = value; } }
         public Vector2 numFrames { get { return _numFrames; } set { _numFrames = value; } }
         public int switchFrame { get { return _switchFrame; } set { _switchFrame = value; } }
-        public int frameWidth { get { return _sprite.Width / (int)numFrames.X; } }
-        public int frameHeight { get { return _sprite.Height / (int)numFrames.Y; } }
+        public int frameWidth { get { return _sprite.texture.Width / (int)numFrames.X; } }
+        public int frameHeight { get { return _sprite.texture.Height / (int)numFrames.Y; } }
         #endregion
 
         #region Public Constructor
-        public Animation(GameObject gameObject, Vector2 numFrames)
+        public Animation(Vector2 numFrames, Sprite sprite)
         {
-            _gameObject = gameObject;
+            _sprite = sprite;
             _currentFrame = new Vector2(0, 0);
             _numFrames = numFrames;
             _frameCounter = 0;
         }
         #endregion
 
-        public Rectangle AnimateFrame(int rate, Sprite img)
+        public Rectangle AnimateFrame(int rate, GameTime time, Sprite img)
         {
             _switchFrame = rate;
-            _frameCounter += _gameObject.gameTime.ElapsedGameTime.Milliseconds;
+            _frameCounter += time.ElapsedGameTime.Milliseconds;
             if (_frameCounter > _switchFrame)
             {
                 _frameCounter = 0;
                 _NextFrame();
             }
 
-            return new Rectangle((int)_currentFrame.X, (int)_currentFrame.Y,
-                frameWidth, frameHeight);
+            return _GetFrame();
         }
 
 
@@ -64,6 +63,16 @@ namespace XNAGameEngine
                 if (_currentFrame.Y > _numFrames.Y)
                     _currentFrame.Y = 0;
             }
+        }
+
+        private Rectangle _GetFrame()
+        {
+            Rectangle t = new Rectangle();
+            t.X = (frameWidth * (int)_currentFrame.X);
+            t.Y = (frameHeight * (int)_currentFrame.Y);
+            t.Width = t.X + frameWidth;
+            t.Height = t.Y + frameHeight;
+            return t;
         }
 
         #endregion
