@@ -64,9 +64,9 @@ namespace XNAGameEngine
         }
         #endregion
 
-        public void Draw(Vector2 position)
+        public void Draw()
         {
-            _gameObject.spriteBatch.Draw(_texture, position, _sourceRect, _tint, _rotation, _pivot, _scale, SpriteEffects.None, _layer);
+            _gameObject.spriteBatch.Draw(_texture, _position, _sourceRect, _tint, _rotation, _pivot, _scale, SpriteEffects.None, _layer);
         }
     }
 }

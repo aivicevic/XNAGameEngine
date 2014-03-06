@@ -14,28 +14,28 @@ namespace XNAGameEngine
     {
         private Sprite _sprite;
         private Animation _animation;
-        private GameObject _go;
-        private Rectangle _dr;
 
         private Vector2 _position;
         
-        public TestObject(GameObject gameObject)
+        public TestObject(GameObject go)
         {
-            _go = gameObject;
-            _sprite = new Sprite(_go, "Assets/asteroid");
-            _animation = new Animation(new Vector2(8, 4), _sprite);
+            _sprite = new Sprite(go, "Assets/asteroid");
+            _animation = new Animation(new Vector2(8, 4), 30, _sprite);
             _position = new Vector2(200, 200);
         }
 
         public void Update(GameTime time)
         {
-            _dr = _animation.AnimateFrame(300, time, _sprite);
-            _sprite.SetRect(_dr);
+            _animation.AnimateFrame(time, _sprite);
+            _sprite.SetRect(_animation.frameRect);
+            _sprite.position = _position;
+            _sprite.pivot = _animation.getPivot;
+            _sprite.rotation = _sprite.rotation += .01f;
         }
 
         public void Draw()
         {
-            _sprite.Draw(_position);
+            _sprite.Draw();
         }
 
     }
