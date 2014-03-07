@@ -13,26 +13,26 @@ namespace XNAGameEngine
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        GameObject gameManager;
-        TestObject tester;
-        List<TestObject> TESTERS;
+        GameInterface gameManager;
+        GameObject tester;
+        List<GameObject> TESTERS;
 
         public Game1()
         {
-            gameManager = new GameObject(this);
+            gameManager = new GameInterface(this);
             gameManager.InitGraphicsDeviceManager();
         }
 
         protected override void Initialize()
         {
             base.Initialize();
-            TESTERS = new List<TestObject>();
+            TESTERS = new List<GameObject>();
         }
 
         protected override void LoadContent()
         {
             gameManager.InitSpriteBatch();
-            tester = new TestObject(gameManager);
+            tester = new GameObject(gameManager);
         }
 
         protected override void UnloadContent()
@@ -47,7 +47,7 @@ namespace XNAGameEngine
 
             for (int i = TESTERS.Count; i < 50; i++)
             {
-                TESTERS.Add(new TestObject(gameManager));
+                TESTERS.Add(new GameObject(gameManager));
             }
 
 

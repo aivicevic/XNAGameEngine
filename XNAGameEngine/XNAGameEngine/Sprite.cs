@@ -20,7 +20,7 @@ namespace XNAGameEngine
         private Vector2 _pivot;
         private Single _scale;
         private Single _layer;
-        private GameObject _gameObject;
+        private GameInterface _gameInterface;
         #endregion 
 
         #region Public Accessors
@@ -35,10 +35,10 @@ namespace XNAGameEngine
         #endregion
 
         #region Public Constructor
-        public Sprite(GameObject gameObject, string file)
+        public Sprite(GameInterface gameInterface, string file)
         {
-            _gameObject = gameObject;
-            _texture = _gameObject.Content.Load<Texture2D>(file);
+            _gameInterface = gameInterface;
+            _texture = _gameInterface.Content.Load<Texture2D>(file);
             _position = new Vector2(0,0);
             _tint = Color.White;
             _rotation = 0;
@@ -66,7 +66,7 @@ namespace XNAGameEngine
 
         public void Draw()
         {
-            _gameObject.spriteBatch.Draw(_texture, _position, _sourceRect, _tint, _rotation, _pivot, _scale, SpriteEffects.None, _layer);
+            _gameInterface.spriteBatch.Draw(_texture, _position, _sourceRect, _tint, _rotation, _pivot, _scale, SpriteEffects.None, _layer);
         }
     }
 }
