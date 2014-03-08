@@ -13,26 +13,26 @@ namespace XNAGameEngine
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        GameInterface gameManager;
-        GameObject tester;
-        List<GameObject> TESTERS;
+        GameInterface gameInterface;
+        TestObject tester;
+        List<TestObject> TESTERS;
 
         public Game1()
         {
-            gameManager = new GameInterface(this);
-            gameManager.InitGraphicsDeviceManager();
+            gameInterface = new GameInterface(this);
+            gameInterface.InitGraphicsDeviceManager();
         }
 
         protected override void Initialize()
         {
             base.Initialize();
-            TESTERS = new List<GameObject>();
+            TESTERS = new List<TestObject>();
         }
 
         protected override void LoadContent()
         {
-            gameManager.InitSpriteBatch();
-            tester = new GameObject(gameManager);
+            gameInterface.InitSpriteBatch();
+            tester = new TestObject(gameInterface);
         }
 
         protected override void UnloadContent()
@@ -45,16 +45,14 @@ namespace XNAGameEngine
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            for (int i = TESTERS.Count; i < 50; i++)
-            {
-                TESTERS.Add(new GameObject(gameManager));
-            }
-
-
             // TODO: Add your update logic here
+            for (int i = TESTERS.Count(); i < 5; i++)
+                TESTERS.Add(new TestObject(gameInterface));
+
             tester.Update(gameTime);
             for (int i = 0; i < TESTERS.Count(); i++)
                 TESTERS[i].Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -62,12 +60,13 @@ namespace XNAGameEngine
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            gameManager.spriteBatch.Begin();
+            gameInterface.spriteBatch.Begin();
             // TODO: Add your drawing code here
             tester.Draw();
             for (int i = 0; i < TESTERS.Count(); i++)
                 TESTERS[i].Draw();
-            gameManager.spriteBatch.End();
+
+            gameInterface.spriteBatch.End();
             base.Draw(gameTime);
         }
     }

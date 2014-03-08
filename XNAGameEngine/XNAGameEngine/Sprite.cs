@@ -32,6 +32,8 @@ namespace XNAGameEngine
         public Texture2D texture { get { return _texture; } }
         public Color tint { get { return _tint; } set { _tint = value; } }
         public Single layer { get { return _layer; } set { _layer = value; } }
+        public int frameWidth { get { return _sourceRect.Width; } }
+        public int frameHeight { get { return _sourceRect.Height; } }
         #endregion
 
         #region Public Constructor

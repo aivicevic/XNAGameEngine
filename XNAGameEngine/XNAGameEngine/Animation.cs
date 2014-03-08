@@ -27,6 +27,8 @@ namespace XNAGameEngine
         public int switchFrame { get { return _switchFrame; } set { _switchFrame = value; } }
         public Rectangle frameRect { get { return _frameRect; } }
         public Vector2 getPivot { get { return new Vector2(_frameWidth/2, _frameHeight / 2); } }
+        public int frameWidth { get { return _frameWidth; } }
+        public int frameHeight { get { return _frameHeight; } }
         #endregion
 
         #region Public Constructor
@@ -42,7 +44,7 @@ namespace XNAGameEngine
         }
         #endregion
 
-        public void AnimateFrame(GameTime time, Sprite img)
+        public void Update(GameTime time, Sprite img)
         {
             _frameCounter += time.ElapsedGameTime.Milliseconds;
             if (_frameCounter > _switchFrame)

@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation.cs" />
+    <Compile Include="CollisionManager.cs" />
     <Compile Include="GameInterface.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="PhysicsManager.cs" />

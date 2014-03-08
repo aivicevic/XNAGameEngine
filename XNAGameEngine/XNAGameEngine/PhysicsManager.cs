@@ -15,17 +15,23 @@ namespace XNAGameEngine
         private Vector2 _position;
         private Vector2 _motionVector;
 
-        public Vector2 position { get { return _position; } }
-        public Vector2 mostionVector { get { return _motionVector; } set { _motionVector = value; } }
+        public Vector2 position { get { return _position; } set { _position = value; } }
+        public Vector2 mosionVector { get { return _motionVector; } set { _motionVector = value; } }
 
-        public PhysicsManager(Vector2 position, Vector2 initMotion) 
+        public PhysicsManager(Vector2 position) 
         {
-            _motionVector = initMotion;
             _position = position;
         }
+
+        public void SetMotion(float x, float y)
+        {
+            _motionVector = new Vector2(x, y);
+        }
+
         public void Update()
         {
             _position = _position + _motionVector;
+            
         }
 
 
