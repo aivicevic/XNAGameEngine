@@ -14,8 +14,8 @@ namespace XNAGameEngine
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GameInterface gameInterface;
-        TestObject tester;
         List<TestObject> TESTERS;
+        CollisionManager cm;
 
         public Game1()
         {
@@ -27,12 +27,15 @@ namespace XNAGameEngine
         {
             base.Initialize();
             TESTERS = new List<TestObject>();
+
         }
 
         protected override void LoadContent()
         {
             gameInterface.InitSpriteBatch();
-            tester = new TestObject(gameInterface);
+            cm = new CollisionManager(true);
+
+
         }
 
         protected override void UnloadContent()
@@ -46,12 +49,29 @@ namespace XNAGameEngine
                 this.Exit();
 
             // TODO: Add your update logic here
-            for (int i = TESTERS.Count(); i < 5; i++)
+            for (int i = TESTERS.Count(); i != 10; i++)
+            {
                 TESTERS.Add(new TestObject(gameInterface));
+            }
 
-            tester.Update(gameTime);
             for (int i = 0; i < TESTERS.Count(); i++)
                 TESTERS[i].Update(gameTime);
+
+
+            for (int i = 0; i <= TESTERS.Count(); i++)
+            {
+                for (int j = 0; j <= TESTERS.Count(); j++)
+                {
+                    if (i != j)
+                    {
+                        float d = Vector2.Distance(TESTERS[i].position, TESTERS[j].position);
+                        if (TESTERS[i].hitBox <= d)
+                        {
+                            TESTERS.RemoveAt(i);
+                        }
+                    }
+                }
+            }
 
             base.Update(gameTime);
         }
@@ -62,7 +82,7 @@ namespace XNAGameEngine
 
             gameInterface.spriteBatch.Begin();
             // TODO: Add your drawing code here
-            tester.Draw();
+
             for (int i = 0; i < TESTERS.Count(); i++)
                 TESTERS[i].Draw();
 

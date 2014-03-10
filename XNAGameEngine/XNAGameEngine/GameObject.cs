@@ -16,7 +16,6 @@ namespace XNAGameEngine
         private Animation _animation;
         private PhysicsManager _physics;
         private GameInterface _gi;
-        private CollisionManager _collision;
         private Vector2 _position;
         private bool _ViewportWallsLocked = true;
 
@@ -24,10 +23,20 @@ namespace XNAGameEngine
         public Vector2 position { get { return _position; } set { _position = value; } }
         public float rotation { get { return _sprite.rotation; } set { _sprite.rotation = value; } }
         public GameInterface gi { get { return _gi; } }
+        public bool hasCollision;
+
+        public float hitBox { get { return _animation.frameWidth; } }
+
+        //public Rectangle hitBox { get { return new Rectangle(
+        //    (int)_sprite.position.X, 
+        //    (int)_sprite.position.Y, 
+        //    _sprite.sourceRect.Width, 
+        //    _sprite.sourceRect.Height); } }
 
         public GameObject(ref GameInterface gi)
         {
             _gi = gi;
+            hasCollision = false;
         }
 
         #region Initalize Objects
@@ -55,8 +64,6 @@ namespace XNAGameEngine
             else
                 r = new Rectangle((int)_position.X, (int)_position.Y,
                     _sprite.frameWidth, _sprite.frameHeight);
-
-            _collision = new CollisionManager(r);
         }
         #endregion
 
@@ -68,19 +75,14 @@ namespace XNAGameEngine
                 _sprite.SetRect(_animation.frameRect);
                 _sprite.pivot = _animation.getPivot;
             }
-            if (_collision != null)
+            if (hasCollision == true)
             {
-                if (_collision.Update())
-                {
-                    _physics.mosionVector = _physics.mosionVector * -1;
-                }
-
             }
 
             if (_physics != null)
             {
                 _physics.Update();
-                _position = _physics.position;
+                _position = _physics.pos;
             }
             if (_sprite != null)
             {
@@ -93,9 +95,9 @@ namespace XNAGameEngine
         private void _NoEscape()
         {
             if (_position.X >= _gi.viewport.Width || _position.X <= 0)
-                _physics.mosionVector = new Vector2(_physics.mosionVector.X * -1, _physics.mosionVector.Y);
+                _physics.vel = new Vector2(_physics.vel.X * -1, _physics.vel.Y);
             else if (_position.Y >= _gi.viewport.Height || _position.Y <= 0)
-                _physics.mosionVector = new Vector2(_physics.mosionVector.X, _physics.mosionVector.Y * -1);
+                _physics.vel = new Vector2(_physics.vel.X, _physics.vel.Y * -1);
         }
 
         public void LockViewportWalls()

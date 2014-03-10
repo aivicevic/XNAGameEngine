@@ -15,13 +15,12 @@ namespace XNAGameEngine
         public TestObject(GameInterface gi)
             : base(ref gi)
         {
-            position = new Vector2(200, 200);
+            position = new Vector2(
+                (float)gi.random.Next(400), (float)gi.random.Next(400));
             InitSprite("Assets/asteroid");
             InitAnimation(new Vector2(8, 4), 30);
             InitPhysics();
-            physics.position = new Vector2(
-                (float)gi.random.Next(200), (float)gi.random.Next(200));
-            physics.SetMotion(rand(), rand());
+            physics.SetVel(rand(), rand());
             InitCollision();
         }
 

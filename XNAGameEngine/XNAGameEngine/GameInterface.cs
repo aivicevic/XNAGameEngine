@@ -19,6 +19,7 @@ namespace XNAGameEngine
         public ContentManager Content{ get { return _game.Content; } }
         public Viewport viewport;
         public Random random;
+        public CollisionManager collisionManager;
 
         public GameInterface(Game1 game)
         {
@@ -30,6 +31,11 @@ namespace XNAGameEngine
         public void InitGraphicsDeviceManager()
         {
             graphicsDeviceManager = new GraphicsDeviceManager(_game);
+        }
+
+        public void InitCollision()
+        {
+            collisionManager = new CollisionManager(true);
         }
 
         public void InitSpriteBatch()
