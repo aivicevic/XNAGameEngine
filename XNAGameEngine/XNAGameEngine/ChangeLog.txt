@@ -1,11 +1,55 @@
 ﻿
 ChangeLog.txt
 
-!!! All team members must track there to this project !!!
+!!! All team members must track there changes to this project !!!
 
+//////////////////////////////////////////////////////////////////////////
 Current Team Memebers - GitHub ID - Contanct info
+//////////////////////////////////////////////////////////////////////////
+
+- Project Lead
 Hypo Klarich - TimeWalk - Cell: 714-614-4956
+Project File Responcability
+- GameObject.cs
+- GameInterface.cs
+- CollisionManager.cs
+- PhysicsManager.cs
+Current Assignments: Physics and Movement
+
+- System Designer
 Mike Villar - macv101 - Cell: 714-869-6646
+Project File Responcability
+- GameOject.cs
+- GameInterface.cs
+- Program.cs
+Current Assignments: FPS tracker, Debuger
+
+- Visual / Audio Designer
+Eric Flowers - Flowers61 - Cell: 951-973-8308
+Project File Responability
+- Animation.cs
+- Sprite.cs
+Current Assignments: SoundManager
+
+- Interface Designer
+Jaqulyn Wong - MistressRuri - Cell: 209-814-5446
+- Program.cs
+- Game1.cs
+Current Assignments: Screen Manager, Interface
+
+- Gameplay Designer
+Wasiem - arabwes - Cell: 313-234-3263
+- Game1.cs
+Current Assignment: GameDesign
+
+//////////////////////////////////////////////////////////////////////////
+
+- Project Over View
+- Create a C# XNA Game Engine that is reusable.
+- Focus your efforts on the Fish Game, A Was's Waldo style game
+
+//////////////////////////////////////////////////////////////////////////
+
 
 //////////////////////////////////////////////////////////////////////////
 // Example Format --													//
