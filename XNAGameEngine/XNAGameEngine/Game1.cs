@@ -58,20 +58,20 @@ namespace XNAGameEngine
                 TESTERS[i].Update(gameTime);
 
 
-            for (int i = 0; i <= TESTERS.Count(); i++)
-            {
-                for (int j = 0; j <= TESTERS.Count(); j++)
-                {
-                    if (i != j)
-                    {
-                        float d = Vector2.Distance(TESTERS[i].position, TESTERS[j].position);
-                        if (TESTERS[i].hitBox <= d)
-                        {
-                            TESTERS.RemoveAt(i);
-                        }
-                    }
-                }
-            }
+            //for (int i = 0; i <= TESTERS.Count(); i++)
+            //{
+            //    for (int j = 0; j <= TESTERS.Count(); j++)
+            //    {
+            //        if (i != j)
+            //        {
+            //            float d = Vector2.Distance(TESTERS[i].position, TESTERS[j].position);
+            //            if (TESTERS[i].hitBox <= d)
+            //            {
+            //                TESTERS.RemoveAt(i);
+            //            }
+            //        }
+            //    }
+            //}
 
             base.Update(gameTime);
         }
