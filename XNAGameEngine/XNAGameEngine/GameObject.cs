@@ -17,26 +17,20 @@ namespace XNAGameEngine
         private PhysicsManager _physics;
         private GameInterface _gi;
         private Vector2 _position;
-        private bool _ViewportWallsLocked = true;
+        private Rectangle _hitbox;
+        private bool _viewportWallsLocked = true;
+        public bool _hasCollision = false;
 
         public PhysicsManager physics { get { return _physics; } set { _physics = value; } }
         public Vector2 position { get { return _position; } set { _position = value; } }
         public float rotation { get { return _sprite.rotation; } set { _sprite.rotation = value; } }
         public GameInterface gi { get { return _gi; } }
-        public bool hasCollision;
-
-        public float hitBox { get { return _animation.frameWidth; } }
-
-        //public Rectangle hitBox { get { return new Rectangle(
-        //    (int)_sprite.position.X, 
-        //    (int)_sprite.position.Y, 
-        //    _sprite.sourceRect.Width, 
-        //    _sprite.sourceRect.Height); } }
+        public Rectangle hitbox { get { return _hitbox; } }
+        public bool hasCollision { get { return _hasCollision; } }
 
         public GameObject(ref GameInterface gi)
         {
             _gi = gi;
-            hasCollision = false;
         }
 
         #region Initalize Objects
@@ -57,13 +51,8 @@ namespace XNAGameEngine
 
         public void InitCollision()
         {
-            Rectangle r;
-            if (_animation != null)
-                r = new Rectangle((int)_position.X, (int)_position.Y,
-                    _animation.frameWidth, _animation.frameHeight);
-            else
-                r = new Rectangle((int)_position.X, (int)_position.Y,
-                    _sprite.frameWidth, _sprite.frameHeight);
+            _SetHitbox();
+            _hasCollision = true;
         }
         #endregion
 
@@ -75,8 +64,9 @@ namespace XNAGameEngine
                 _sprite.SetRect(_animation.frameRect);
                 _sprite.pivot = _animation.getPivot;
             }
-            if (hasCollision == true)
+            if (_hasCollision == true)
             {
+                _SetHitbox();
             }
 
             if (_physics != null)
@@ -88,7 +78,7 @@ namespace XNAGameEngine
             {
                 _sprite.position = _position;
             }
-            if (_ViewportWallsLocked)
+            if (_viewportWallsLocked)
                 _NoEscape();
         }
 
@@ -102,12 +92,12 @@ namespace XNAGameEngine
 
         public void LockViewportWalls()
         {
-            _ViewportWallsLocked = true;
+            _viewportWallsLocked = true;
         }
 
         public void UnlockViewportWalls()
         {
-            _ViewportWallsLocked = false;
+            _viewportWallsLocked = false;
         }
 
         public void Draw()
@@ -115,6 +105,16 @@ namespace XNAGameEngine
             _sprite.Draw();
         }
 
+        private void _SetHitbox()
+        {
+            if (_animation != null)
+                _hitbox = new Rectangle((int)_position.X, (int)_position.Y,
+                    _animation.frameWidth, _animation.frameHeight);
+            else
+                _hitbox = new Rectangle((int)_position.X, (int)_position.Y,
+                    _sprite.frameWidth, _sprite.frameHeight);
+
+        }
 
     }
 

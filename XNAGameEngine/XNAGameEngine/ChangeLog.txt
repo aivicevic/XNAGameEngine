@@ -1,0 +1,27 @@
+﻿
+ChangeLog.txt
+
+!!! All team members must track there to this project !!!
+
+Current Team Memebers - GitHub ID - Contanct info
+Hypo Klarich - TimeWalk - Cell: 714-614-4956
+Mike Villar - macv101 - Cell: 714-869-6646
+
+//////////////////////////////////////////////////////////////////////////
+// Example Format --													//
+//////////////////////////////////////////////////////////////////////////
+// XNAGameEngine | Hypo Klarich | 3/11/2014								//
+// -CollisionManager.cs -Game1.cs -GameInterface.cs -GameObject.cs		//
+// -Time: 11am - 1:38pm = 2:38											//
+// -Notes: Collision is up and running. This is an un-optimized version //
+// but is good enough for or first few projects.						//
+//////////////////////////////////////////////////////////////////////////
+
+
+XNAGameEngine | Hypo Klarich | 3/11/2014								
+ -CollisionManager.cs -Game1.cs -GameInterface.cs -GameObject.cs		
+ -Time: 11am - 1:38pm = 2:38											
+ -Notes: Collision is up and running. This is an un-optimized version 
+	 but is good enough for or first few projects.	
+  
+
