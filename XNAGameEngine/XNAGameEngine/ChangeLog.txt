@@ -63,6 +63,11 @@ Current Assignment: GameDesign
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
+XNAGameEngine | Jacqulyn Wong | 3/12/2014
+- ChangeLog.txt
+- Time: 12:49am - 12:53am = 0:04
+- Notes: Am I able to just correct the spelling mistakes I see here?
+	They make my eyes hurt. .. I did it anyway. I hope I got them all.
 
 XNAGameEngine | Michael Villar | 3/11/2014								
  -(New) Debug.cs - Game1.cs		
@@ -87,9 +92,4 @@ XNAGameEngine | Hypo Klarich | 3/11/2014
 -CollisionManager.cs -Game1.cs -PhysicsManager.cs
 -Time 8:30 pm - 9:30pm = 1:10
 -Notes: Fixed the Physics and broke it some more...
-  
-XNAGameEngine | Jacqulyn Wong | 3/12/2014
-- ChangeLog.txt
-- Time: 12:49am - 12:53am = 0:04
-- Notes: Am I able to just correct the spelling mistakes I see here?
-	They make my eyes hurt. .. I did it anyway. I hope I got them all.
+ 
