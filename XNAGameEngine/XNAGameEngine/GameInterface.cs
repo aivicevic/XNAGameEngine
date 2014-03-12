@@ -30,7 +30,7 @@ namespace XNAGameEngine
 
         public void InitGraphicsDeviceManager() { graphicsDeviceManager = new GraphicsDeviceManager(_game); }
         public void InitCollision() { collisionManager = new CollisionManager(); }
-        public void InitSpriteBatch()
+        public void LoadSpriteBatch()
         {
             spriteBatch = new SpriteBatch(_game.GraphicsDevice);
             viewport = graphicsDeviceManager.GraphicsDevice.Viewport;

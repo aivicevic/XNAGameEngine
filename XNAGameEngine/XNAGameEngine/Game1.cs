@@ -21,25 +21,37 @@ namespace XNAGameEngine
         GameInterface gameInterface;
         LinkedList<GameObject> TESTERS;
         Debug debug;
+        FpsManager fps;
+       
 
         public Game1()
         {
             gameInterface = new GameInterface(this);
             gameInterface.InitGraphicsDeviceManager();
+            //Definition in FPS Notes
+            IsFixedTimeStep = true;
         }
 
         protected override void Initialize()
         {
             base.Initialize();
             gameInterface.InitCollision();
+            
             TESTERS = new LinkedList<GameObject>();
 
         }
 
         protected override void LoadContent()
         {
-            gameInterface.InitSpriteBatch();
-            debug = new Debug(gameInterface.Content, gameInterface.spriteBatch, 100, 100);
+            gameInterface.LoadSpriteBatch();
+            debug = new Debug(gameInterface.Content, gameInterface.spriteBatch);
+            fps = new FpsManager(debug);
+
+            //Definition of SynchronizeWithVerticalRetrace in FPS Notes
+            gameInterface.graphicsDeviceManager.SynchronizeWithVerticalRetrace = true;
+            //Must use this to apply changes to SynchronizeWithVerticalRetrace
+            gameInterface.graphicsDeviceManager.ApplyChanges();
+            
         }
 
         protected override void UnloadContent()
@@ -64,6 +76,7 @@ namespace XNAGameEngine
             foreach (GameObject tester in TESTERS)
                 tester.Update(gameTime);
 
+            fps.Update(gameTime);
             debug.PushBack("Debug Test", 100, 100);
             base.Update(gameTime);
         }
@@ -77,6 +90,7 @@ namespace XNAGameEngine
             foreach (GameObject obj in TESTERS)
                 obj.Draw();
 
+            fps.Draw(gameTime);
             debug.Draw();
             gameInterface.spriteBatch.End();
             base.Draw(gameTime);
