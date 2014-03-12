@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -19,6 +20,7 @@ namespace XNAGameEngine
     {
         GameInterface gameInterface;
         LinkedList<GameObject> TESTERS;
+        Debug debug;
 
         public Game1()
         {
@@ -37,6 +39,7 @@ namespace XNAGameEngine
         protected override void LoadContent()
         {
             gameInterface.InitSpriteBatch();
+            debug = new Debug(gameInterface.Content, gameInterface.spriteBatch, 100, 100);
         }
 
         protected override void UnloadContent()
@@ -61,6 +64,7 @@ namespace XNAGameEngine
             foreach (GameObject tester in TESTERS)
                 tester.Update(gameTime);
 
+            debug.PushBack("Debug Test", 100, 100);
             base.Update(gameTime);
         }
 
@@ -73,6 +77,7 @@ namespace XNAGameEngine
             foreach (GameObject obj in TESTERS)
                 obj.Draw();
 
+            debug.Draw();
             gameInterface.spriteBatch.End();
             base.Draw(gameTime);
         }
