@@ -61,6 +61,14 @@ Current Assignment: GameDesign
 // but is good enough for or first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
+XNAGameEngine | Michael Villar | 3/12/2014								
+ -(New) FpsManager.cs - Debug.cs		
+ -Time: 1:30am - 3:05am = 1:35											
+ -Notes: Added FpsManager.cs and FPS Notes. I commented quite a bit
+ within the code to explain a little on what the code does. Look at 
+ the FPS notes, which will probably be removed later so it does not take
+ uneccessary space. It is filled with information that everyone should
+ know.
 
 XNAGameEngine | Michael Villar | 3/12/2014								
  -(New) FpsManager.cs - Debug.cs		
