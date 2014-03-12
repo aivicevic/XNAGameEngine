@@ -50,13 +50,12 @@ namespace XNAGameEngine
                 this.Exit();
 
             // TODO: Add your update logic here
-            for (int i = TESTERS.Count(); i <= 20; i++)
+            for (int i = TESTERS.Count(); i < 10; i++)
                 TESTERS.AddLast(new TestObject(gameInterface));
 
             foreach (CollisionEvent Event in gameInterface.collisionManager.Check(TESTERS))
-            {
-                Event.object1.physics.Collision(Event.object2);
-            }
+                if (Event != null)
+                    PhysicsManager.Collision(Event.object1, Event.object2);
 
 
             foreach (GameObject tester in TESTERS)

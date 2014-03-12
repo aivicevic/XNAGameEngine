@@ -31,7 +31,7 @@ namespace XNAGameEngine
 
         private float rand()
         {
-            return ((float)gi.random.Next(200) - 100) / 100;
+            return ((float)gi.random.Next(500) - 100) / 100;
         }
     }
 }

@@ -73,5 +73,10 @@ XNAGameEngine | Hypo Klarich | 3/11/2014
 -Time 6:00 pm - 8:20pm = 2:20
 -Notes: Added Physics to the game objects and broke the physics quite
 	spectacularly. I'll get it fixed but it's not a top priorety
+
+XNAGameEngine | Hypo Klarich | 3/11/2014
+-CollisionManager.cs -Game1.cs -PhysicsManager.cs
+-Time 8:30 pm - 9:30pm = 1:10
+-Notes: Fixed the Physics and borke it some more...
   
 
