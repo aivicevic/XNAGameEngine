@@ -62,6 +62,12 @@ Current Assignment: GameDesign
 //////////////////////////////////////////////////////////////////////////
 
 
+XNAGameEngine | Michael Villar | 3/12/2014								
+ -(New) FpsManager.cs - Debug.cs		
+ -Time: 1:08am - 1:30am = :22											
+ -Notes: Fixed variables and functions to fit the standard coding 
+ conventions. Added an empty class called FpsManager.cs
+
 XNAGameEngine | Michael Villar | 3/11/2014								
  -(New) Debug.cs - Game1.cs		
  -Time: 12pm - 1:08am = 1:08											
