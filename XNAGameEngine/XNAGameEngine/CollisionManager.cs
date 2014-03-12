@@ -30,7 +30,11 @@ namespace XNAGameEngine
                 foreach (GameObject obj2 in LIST)
                     if (!obj1.Equals(obj2))
                         if (obj1.hitbox.Intersects(obj2.hitbox))
+                        {
+                            obj1.physics.pos -= obj1.physics.vel;
+                            obj2.physics.pos -= obj2.physics.vel;
                             IDX.Add(new CollisionEvent(obj1, obj2));
+                        }
 
             return IDX;
         }
