@@ -22,25 +22,31 @@ namespace XNAGameEngine
         public void Push(GameObject obj) { _KILLBOX.AddLast(obj); }
         public void Remove(GameObject obj) { _KILLBOX.Remove(obj); }
 
-        public LinkedList<GameObject> RunCollision(LinkedList<GameObject> LIST)
+        public List<CollisionEvent> Check(LinkedList<GameObject> LIST)
         {
-            List<GameObject> IDX = new List<GameObject>();
+            List<CollisionEvent> IDX = new List<CollisionEvent>();
 
             foreach (GameObject obj1 in LIST)
                 foreach (GameObject obj2 in LIST)
                     if (!obj1.Equals(obj2))
                         if (obj1.hitbox.Intersects(obj2.hitbox))
-                        {
-                            IDX.Add(obj1);
-                            break;
-                        }
-                            
+                            IDX.Add(new CollisionEvent(obj1, obj2));
 
-            foreach (GameObject obj in IDX)
-                LIST.Remove(obj);
-
-            return LIST;
+            return IDX;
         }
-
     }
+
+    class CollisionEvent
+    {
+        public GameObject object1;
+        public GameObject object2;
+
+        public CollisionEvent(GameObject obj1, GameObject obj2)
+        {
+            object1 = obj1;
+            object2 = obj2;
+        }
+    }
+
+
 }

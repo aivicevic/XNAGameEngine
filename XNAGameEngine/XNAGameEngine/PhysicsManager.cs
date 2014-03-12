@@ -31,8 +31,10 @@ namespace XNAGameEngine
             _vel = new Vector2(x, y);
         }
 
-        public void Collision(PhysicsManager o2)
+        public void Collision(GameObject obj)
         {
+            PhysicsManager o2 = obj.physics;
+
             Vector2 n_c = Vector2.Normalize(_pos - o2.pos);
             Vector2 n_tc = new Vector2(n_c.Y * -1, n_c.X);
 

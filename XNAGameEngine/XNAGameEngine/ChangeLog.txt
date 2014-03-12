@@ -67,5 +67,11 @@ XNAGameEngine | Hypo Klarich | 3/11/2014
  -Time: 11am - 1:38pm = 2:38											
  -Notes: Collision is up and running. This is an un-optimized version 
 	 but is good enough for or first few projects.	
+
+XNAGameEngine | Hypo Klarich | 3/11/2014
+-CollisionManager.cs -Game1.cs -PhysicsManager.cs
+-Time 6:00 pm - 8:20pm = 2:20
+-Notes: Added Physics to the game objects and broke the physics quite
+	spectacularly. I'll get it fixed but it's not a top priorety
   
 

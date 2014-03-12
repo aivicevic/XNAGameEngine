@@ -53,15 +53,14 @@ namespace XNAGameEngine
             for (int i = TESTERS.Count(); i <= 20; i++)
                 TESTERS.AddLast(new TestObject(gameInterface));
 
-
-            TESTERS = gameInterface.collisionManager.RunCollision(TESTERS);
-
-            foreach (GameObject tester in TESTERS)
+            foreach (CollisionEvent Event in gameInterface.collisionManager.Check(TESTERS))
             {
-                tester.Update(gameTime);
+                Event.object1.physics.Collision(Event.object2);
             }
 
 
+            foreach (GameObject tester in TESTERS)
+                tester.Update(gameTime);
 
             base.Update(gameTime);
         }
