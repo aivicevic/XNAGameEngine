@@ -1,15 +1,15 @@
 ﻿
 ChangeLog.txt
 
-!!! All team members must track there changes to this project !!!
+!!! All team members must track their changes to this project !!!
 
 //////////////////////////////////////////////////////////////////////////
-Current Team Memebers - GitHub ID - Contanct info
+Current Team Members - GitHub ID - Contact info
 //////////////////////////////////////////////////////////////////////////
 
 - Project Lead
 Hypo Klarich - TimeWalk - Cell: 714-614-4956
-Project File Responcability
+Project File Responsibility
 - GameObject.cs
 - GameInterface.cs
 - CollisionManager.cs
@@ -18,33 +18,35 @@ Current Assignments: Physics and Movement
 
 - System Designer
 Mike Villar - macv101 - Cell: 714-869-6646
-Project File Responcability
+Project File Responsibility
 - GameOject.cs
 - GameInterface.cs
 - Program.cs
-Current Assignments: FPS tracker, Debuger
+Current Assignments: FPS tracker, Debugger
 
 - Visual / Audio Designer
 Eric Flowers - Flowers61 - Cell: 951-973-8308
-Project File Responability
+Project File Responsibility
 - Animation.cs
 - Sprite.cs
 Current Assignments: SoundManager
 
 - Interface Designer
-Jaqulyn Wong - MistressRuri - Cell: 209-814-5446
+Jacqulyn Wong - MistressRuri - Cell: 209-814-5446
+Project File Responsibility
 - Program.cs
 - Game1.cs
 Current Assignments: Screen Manager, Interface
 
 - Gameplay Designer
 Wasiem - arabwes - Cell: 313-234-3263
+Project File Responsibility
 - Game1.cs
 Current Assignment: GameDesign
 
 //////////////////////////////////////////////////////////////////////////
 
-- Project Over View
+- Project Overview
 - Create a C# XNA Game Engine that is reusable.
 - Focus your efforts on the Fish Game, A Was's Waldo style game
 
@@ -58,7 +60,7 @@ Current Assignment: GameDesign
 // -CollisionManager.cs -Game1.cs -GameInterface.cs -GameObject.cs		//
 // -Time: 11am - 1:38pm = 2:38											//
 // -Notes: Collision is up and running. This is an un-optimized version //
-// but is good enough for or first few projects.						//
+// but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
 
@@ -73,17 +75,21 @@ XNAGameEngine | Hypo Klarich | 3/11/2014
  -CollisionManager.cs -Game1.cs -GameInterface.cs -GameObject.cs		
  -Time: 11am - 1:38pm = 2:38											
  -Notes: Collision is up and running. This is an un-optimized version 
-	 but is good enough for or first few projects.	
+	 but is good enough for our first few projects.	
 
 XNAGameEngine | Hypo Klarich | 3/11/2014
 -CollisionManager.cs -Game1.cs -PhysicsManager.cs
 -Time 6:00 pm - 8:20pm = 2:20
 -Notes: Added Physics to the game objects and broke the physics quite
-	spectacularly. I'll get it fixed but it's not a top priorety
+	spectacularly. I'll get it fixed but it's not a top priority
 
 XNAGameEngine | Hypo Klarich | 3/11/2014
 -CollisionManager.cs -Game1.cs -PhysicsManager.cs
 -Time 8:30 pm - 9:30pm = 1:10
--Notes: Fixed the Physics and borke it some more...
+-Notes: Fixed the Physics and broke it some more...
   
-
+XNAGameEngine | Jacqulyn Wong | 3/12/2014
+- ChangeLog.txt
+- Time: 12:49am - 12:53am = 0:04
+- Notes: Am I able to just correct the spelling mistakes I see here?
+	They make my eyes hurt. .. I did it anyway. I hope I got them all.
