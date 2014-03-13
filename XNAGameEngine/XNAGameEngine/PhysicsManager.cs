@@ -36,7 +36,7 @@ namespace XNAGameEngine
             _vel = new Vector2(x, y);
         }
 
-        public static PhysicsEvent Collision(GameObject obj, GameObject obj2)
+        public static void Collision(GameObject obj, GameObject obj2)
         {
 
             PhysicsManager o1 = obj.physics;
@@ -59,8 +59,7 @@ namespace XNAGameEngine
             Vector2 v2_t = Vector2.Multiply(n_tc, o2_t);
 
             o1.vel = v1_c + v1_t;
-            //o2.vel = v2_c + v2_t;
-            return new PhysicsEvent(o1.vel, o2.vel);
+            o2.vel = v2_c + v2_t;
 
 
             //Vector2 v1 = new Vector2(obj.physics.vel.X * -1, obj.physics.vel.Y * -1);

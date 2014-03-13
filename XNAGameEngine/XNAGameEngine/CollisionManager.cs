@@ -22,21 +22,28 @@ namespace XNAGameEngine
         public void Push(GameObject obj) { _KILLBOX.AddLast(obj); }
         public void Remove(GameObject obj) { _KILLBOX.Remove(obj); }
 
-        public List<CollisionEvent> Check(LinkedList<GameObject> LIST)
+        public static void Check(LinkedList<GameObject> LIST)
         {
-            List<CollisionEvent> IDX = new List<CollisionEvent>();
+            foreach(TestObject tester1 in LIST)
+                foreach (TestObject tester2 in LIST)
+                    if (tester1 != tester2)
+                    {
+                        float hitbox1 = tester1.hitbox.Width / 2;
+                        float hitbox2 = tester2.hitbox.Width / 2;
+                        float distance = Math.Abs(Vector2.Distance(tester1.position, tester2.position));
 
-            foreach (GameObject obj1 in LIST)
-                foreach (GameObject obj2 in LIST)
-                    if (!obj1.Equals(obj2))
-                        if (obj1.hitbox.Intersects(obj2.hitbox))
+                        if (distance <= hitbox1 + hitbox2)
                         {
-                            obj1.physics.pos -= obj1.physics.vel;
-                            obj2.physics.pos -= obj2.physics.vel;
-                            IDX.Add(new CollisionEvent(obj1, obj2));
-                        }
+                            float scaler = distance - (hitbox1 + hitbox2);
+                            Vector2 vel1 = Vector2.Normalize(tester1.physics.vel);
+                            Vector2 vel2 = Vector2.Normalize(tester2.physics.vel);
 
-            return IDX;
+                            tester1.position += (vel1 * scaler);
+                            tester2.position += (vel2 * scaler);
+
+                            PhysicsManager.Collision(tester1, tester2);
+                        }
+                    }
         }
     }
 

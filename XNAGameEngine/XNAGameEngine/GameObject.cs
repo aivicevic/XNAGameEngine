@@ -29,6 +29,9 @@ namespace XNAGameEngine
         public bool hasCollision { get { return _hasCollision; } }
         public bool wallIsLocked { set { _viewportWallsLocked = value; } }
 
+
+
+        // Constructor
         public GameObject(ref GameInterface gi)
         {
             _gi = gi;

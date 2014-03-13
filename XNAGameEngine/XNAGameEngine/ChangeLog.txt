@@ -64,6 +64,13 @@ Current Assignment: GameDesign
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
+XNAGameEngine | Hypo Klarich | 3/13/2014
+-CollisionManager.cs -Debug.cs -Gaame1.cs -GameObjects.cs -PhysicsManager.cs
+-Time 9:30 am - 11:12 am = 1:42
+-Notes: Drasticaly improved the collision, still some problems that have been
+identified but not solved. Made changes to the debugger so it would no longer 
+need a position, that is calculated and stored staticly. 
+
 XNAGameEngine | Michael Villar | 3/13/2014
 -Game1.cs - GameInterface.cs - Mouse.cs - InputManger.cs (NEW)
 -Time 10:30 pm - 1:16 am = 2:44

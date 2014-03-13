@@ -17,6 +17,8 @@ namespace XNAGameEngine
         private static List<DebugLine> _WATCHLIST;
 
         private static int _lineNum = 1;
+        private const int _linescale = 10;
+        private const int _anchor = 5;
 
         public Debug(ContentManager content, SpriteBatch t_batch)
         {
@@ -25,10 +27,10 @@ namespace XNAGameEngine
             _WATCHLIST = new List<DebugLine>();
         }
 
-        public static void PushBack(string text, float x, float y)
+        public static void PushBack(string text)
         {
             string line = _lineNum + ": " + text;
-            _WATCHLIST.Add(new DebugLine(line, x, y));
+            _WATCHLIST.Add(new DebugLine(line, _anchor, (_lineNum + 1) * _linescale));
             _lineNum++;
         }
 

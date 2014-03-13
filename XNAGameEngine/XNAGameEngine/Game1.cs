@@ -64,9 +64,7 @@ namespace XNAGameEngine
             for (int i = TESTERS.Count(); i < 10; i++)
                 TESTERS.AddLast(new TestObject(gameInterface));
 
-            foreach (CollisionEvent Event in gameInterface.collisionManager.Check(TESTERS))
-                if (Event != null)
-                    PhysicsManager.Collision(Event.object1, Event.object2);
+            CollisionManager.Check(TESTERS);
 
             foreach (GameObject tester in TESTERS)
                 tester.Update(gameTime);
@@ -79,7 +77,7 @@ namespace XNAGameEngine
 
             //Debugger
             Debug.PushBack(Mouse.GetState().X.ToString() + ", " +
-                           Mouse.GetState().Y.ToString(), 100, 100);
+                           Mouse.GetState().Y.ToString());
 
             base.Update(gameTime);
         }
