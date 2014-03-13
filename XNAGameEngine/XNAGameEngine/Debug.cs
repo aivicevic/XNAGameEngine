@@ -34,6 +34,15 @@ namespace XNAGameEngine
             _lineNum++;
         }
 
+        public static void PopBack()
+        {
+            if (_WATCHLIST.Count > 0)
+            {
+                _WATCHLIST.RemoveAt(_WATCHLIST.Count -1);
+                _lineNum--;
+            }
+        }
+
         public void Draw()
         {
             foreach (DebugLine line in _WATCHLIST)

@@ -32,7 +32,11 @@ namespace XNAGameEngine
                         float hitbox2 = tester2.hitbox.Width / 2;
                         float distance = Math.Abs(Vector2.Distance(tester1.position, tester2.position));
 
-                        if (distance <= hitbox1 + hitbox2)
+                        Debug.PopBack();
+                        Debug.PushBack(distance.ToString("F"));
+
+
+                        if (distance < hitbox1 + hitbox2)
                         {
                             float scaler = distance - (hitbox1 + hitbox2);
                             Vector2 vel1 = Vector2.Normalize(tester1.physics.vel);
