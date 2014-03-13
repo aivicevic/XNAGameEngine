@@ -22,7 +22,7 @@ namespace XNAGameEngine
         LinkedList<GameObject> TESTERS;
         Debug debug;
         FpsManager fps;
-       
+        GameMouse myMouse;
 
         public Game1()
         {
@@ -46,6 +46,7 @@ namespace XNAGameEngine
             gameInterface.LoadSpriteBatch();
             debug = new Debug(gameInterface.Content, gameInterface.spriteBatch);
             fps = new FpsManager(debug);
+            myMouse = new GameMouse(gameInterface);
 
             //Definition of SynchronizeWithVerticalRetrace in FPS Notes
             gameInterface.graphicsDeviceManager.SynchronizeWithVerticalRetrace = true;
@@ -72,12 +73,14 @@ namespace XNAGameEngine
                 if (Event != null)
                     PhysicsManager.Collision(Event.object1, Event.object2);
 
-
             foreach (GameObject tester in TESTERS)
                 tester.Update(gameTime);
 
             fps.Update(gameTime);
-            debug.PushBack("Debug Test", 100, 100);
+            myMouse.Update(gameTime);
+
+            //Debugger
+            debug.PushBack(myMouse.position.ToString(), 100, 100);
             base.Update(gameTime);
         }
 
@@ -92,6 +95,7 @@ namespace XNAGameEngine
 
             fps.Draw(gameTime);
             debug.Draw();
+            myMouse.Draw();
             gameInterface.spriteBatch.End();
             base.Draw(gameTime);
         }

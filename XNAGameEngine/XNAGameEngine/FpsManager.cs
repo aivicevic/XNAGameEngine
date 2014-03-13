@@ -30,7 +30,7 @@ namespace XNAGameEngine
             // Update
             _elapsedTime += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
  
-            // 1 Second has passed (_totalFrames per second
+            // 1 Second has passed 
             if (_elapsedTime >= 1000.0f)
             {
                 _fps = _totalFrames;

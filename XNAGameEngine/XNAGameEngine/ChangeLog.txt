@@ -22,7 +22,8 @@ Project File Responsibility
 - GameOject.cs
 - GameInterface.cs
 - Program.cs
-Current Assignments: FPS tracker, Debugger
+Current Assignments: Mouse Input
+Previous Assignments: FPS Manager, Debugger (Done)
 
 - Visual / Audio Designer
 Eric Flowers - Flowers61 - Cell: 951-973-8308
@@ -62,6 +63,14 @@ Current Assignment: GameDesign
 // -Notes: Collision is up and running. This is an un-optimized version //
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
+
+XNAGameEngine | Michael Villar | 3/12/2014
+- FpsManager.cs - Game1.cs - GameObject.cs - Mouse.cs (NEW)
+- Time: 4:00 - 7:25 = 3:25
+- Notes: Input the Mouse class. The mouse is using the Ship image
+and it reacts with the position. However, the mouse can not have 
+collision. Collision is dependent on the physics. Details in
+Mouse Class.
 
 XNAGameEngine | Jacqulyn Wong | 3/12/2014
 - ChangeLog.txt
