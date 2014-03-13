@@ -15,14 +15,17 @@ namespace XNAGameEngine
          * Update - measures the frequency of calls to Update
          */
         private int _totalFrames;
-
         private float _elapsedTime;
         private int _fps;
-        private Debug _debug;
+        private DebugLine _line;
+        private SpriteBatch _spriteBatch;
+        private SpriteFont _font;
 
-        public FpsManager(Debug debug)
+
+        public FpsManager(ContentManager content, SpriteBatch t_batch)
         {
-            _debug = debug;
+            _spriteBatch = t_batch;
+            _font = content.Load<SpriteFont>("Debug");
         }
 
          public void Update(GameTime gameTime)
@@ -37,13 +40,14 @@ namespace XNAGameEngine
                 _totalFrames = 0;
                 _elapsedTime = 0;
             }
+
+            _line = new DebugLine("FPS: " + _fps, 5, 5);
         }
 
-         public void Draw(GameTime gameTime)
+         public void Draw()
          {
-             
              _totalFrames++;
-             _debug.PushBack(_fps.ToString(), 500, 15);          
+             _spriteBatch.DrawString(_font, _line.text, _line.position, Color.LimeGreen);
          }
 
 

@@ -26,12 +26,12 @@ namespace XNAGameEngine
         private MouseState mouse;
         public MouseState getMouse { get { return mouse; } set { mouse = value; } }
 
-        public GameMouse(GameInterface gi)
+        public GameMouse(GameInterface gi, string file)
             : base(ref gi)
         {
             mouse = new MouseState();
             wallIsLocked = false;                   
-            InitSprite("Assets/ship");
+            InitSprite(file);
             InitAnimation(new Vector2(1, 1), 100);        
             InitCollision();
         }

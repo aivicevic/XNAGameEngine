@@ -64,6 +64,16 @@ Current Assignment: GameDesign
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
+XNAGameEngine | Hypo Klarich | 3/12/2014
+-FpsManager.cs -Game1.cs -GameInterface.cs -Mouse.cs -Debug.cs
+-Time 8:00 pm - 10:02 pm = 2:02
+-Notes: You did a great job Mike, however I went through and hid a lot
+of you code. I moved both the debugger and the FPS into the Gameinterface
+as well as, completely seperated the FPS from the Debugger. Mouse got moved
+to GameInterface as well. Its best to think of GameInterface as a "Global"
+container where we hide global veriables and objects to keep our main loop
+as clean as possable.
+
 XNAGameEngine | Michael Villar | 3/12/2014
 - FpsManager.cs - Game1.cs - GameObject.cs - Mouse.cs (NEW)
 - Time: 4:00 - 7:25 = 3:25
