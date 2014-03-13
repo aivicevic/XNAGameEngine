@@ -6,7 +6,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
-
+using Microsoft.Xna.Framework.Input;
 
 namespace XNAGameEngine
 {
@@ -20,9 +20,10 @@ namespace XNAGameEngine
         public Viewport viewport;
         public Random random;
         public CollisionManager collisionManager;
-        public GameMouse mouse;
+        
         public Debug debug;
         public FpsManager fps;
+        public InputManager inputManager;
 
         public GameInterface(Game1 game)
         {
@@ -36,7 +37,8 @@ namespace XNAGameEngine
 
         public void LoadGameInterface()
         {
-            mouse = new GameMouse(this, "Assets/ship");
+            inputManager = new InputManager(this);
+            AddInput();
             debug = new Debug(Content, spriteBatch);
             fps = new FpsManager(Content, spriteBatch);
         }
@@ -49,15 +51,23 @@ namespace XNAGameEngine
 
         public void Update(GameTime gameTime)
         {
-            mouse.Update(gameTime);
+            inputManager.Update(gameTime);
             fps.Update(gameTime);
         }
 
         public void Draw()
         {
-            mouse.Draw();
+            inputManager.Draw();
             debug.Draw();
             fps.Draw();
+        }
+
+        void AddInput()
+        {
+            inputManager.AddEvent("Esc");           //Add name of event
+            inputManager["Esc"].Add(Keys.Escape);   //Add corresponding key
+            // Add game logic in Game1 (will be changing this obviously)
+            
         }
 
     }

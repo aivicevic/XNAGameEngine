@@ -22,8 +22,8 @@ Project File Responsibility
 - GameOject.cs
 - GameInterface.cs
 - Program.cs
-Current Assignments: Mouse Input
-Previous Assignments: FPS Manager, Debugger (Done)
+Current Assignments: Input Manager
+Previous Assignments: GameMouse, FPS Manager, Debugger
 
 - Visual / Audio Designer
 Eric Flowers - Flowers61 - Cell: 951-973-8308
@@ -64,15 +64,22 @@ Current Assignment: GameDesign
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
+XNAGameEngine | Michael Villar | 3/13/2014
+-Game1.cs - GameInterface.cs - Mouse.cs - InputManger.cs (NEW)
+-Time 10:30 pm - 1:16 am = 2:44
+-Notes: Created an InputManager class. Able to add different events
+in the GameInterface class with it. Also placed GameMouse within it.
+Still need to clean it up and review design. 
+
 XNAGameEngine | Hypo Klarich | 3/12/2014
 -FpsManager.cs -Game1.cs -GameInterface.cs -Mouse.cs -Debug.cs
 -Time 8:00 pm - 10:02 pm = 2:02
 -Notes: You did a great job Mike, however I went through and hid a lot
-of you code. I moved both the debugger and the FPS into the Gameinterface
+of your code. I moved both the debugger and the FPS into the Gameinterface
 as well as, completely seperated the FPS from the Debugger. Mouse got moved
 to GameInterface as well. Its best to think of GameInterface as a "Global"
-container where we hide global veriables and objects to keep our main loop
-as clean as possable.
+container where we hide global variables and objects to keep our main loop
+as clean as possible.
 
 XNAGameEngine | Michael Villar | 3/12/2014
 - FpsManager.cs - Game1.cs - GameObject.cs - Mouse.cs (NEW)

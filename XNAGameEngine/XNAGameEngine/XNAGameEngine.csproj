@@ -110,9 +110,11 @@
     <Compile Include="Animation.cs" />
     <Compile Include="CollisionManager.cs" />
     <Compile Include="Debug.cs" />
+    <Compile Include="Event.cs" />
     <Compile Include="FpsManager.cs" />
     <Compile Include="GameInterface.cs" />
     <Compile Include="GameObject.cs" />
+    <Compile Include="InputManager.cs" />
     <Compile Include="Mouse.cs" />
     <Compile Include="PhysicsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

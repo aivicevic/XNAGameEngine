@@ -71,10 +71,15 @@ namespace XNAGameEngine
             foreach (GameObject tester in TESTERS)
                 tester.Update(gameTime);
 
+            //Input Logic
+            if(gameInterface.inputManager["Esc"].IsDown)
+                this.Exit();
+            
             gameInterface.Update(gameTime);
 
             //Debugger
-            Debug.PushBack(gameInterface.mouse.position.ToString(), 100, 100);
+            Debug.PushBack(Mouse.GetState().X.ToString() + ", " +
+                           Mouse.GetState().Y.ToString(), 100, 100);
 
             base.Update(gameTime);
         }
