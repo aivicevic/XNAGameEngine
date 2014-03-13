@@ -27,6 +27,7 @@ namespace XNAGameEngine
         public GameInterface gi { get { return _gi; } }
         public Rectangle hitbox { get { return _hitbox; } }
         public bool hasCollision { get { return _hasCollision; } }
+        public bool wallIsLocked { set { _viewportWallsLocked = value; } }
 
         public GameObject(ref GameInterface gi)
         {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -19,24 +20,39 @@ namespace XNAGameEngine
     {
         GameInterface gameInterface;
         LinkedList<GameObject> TESTERS;
+        Debug debug;
+        FpsManager fps;
+        GameMouse myMouse;
 
         public Game1()
         {
             gameInterface = new GameInterface(this);
             gameInterface.InitGraphicsDeviceManager();
+            //Definition in FPS Notes
+            IsFixedTimeStep = true;
         }
 
         protected override void Initialize()
         {
             base.Initialize();
             gameInterface.InitCollision();
+            
             TESTERS = new LinkedList<GameObject>();
 
         }
 
         protected override void LoadContent()
         {
-            gameInterface.InitSpriteBatch();
+            gameInterface.LoadSpriteBatch();
+            debug = new Debug(gameInterface.Content, gameInterface.spriteBatch);
+            fps = new FpsManager(debug);
+            myMouse = new GameMouse(gameInterface);
+
+            //Definition of SynchronizeWithVerticalRetrace in FPS Notes
+            gameInterface.graphicsDeviceManager.SynchronizeWithVerticalRetrace = true;
+            //Must use this to apply changes to SynchronizeWithVerticalRetrace
+            gameInterface.graphicsDeviceManager.ApplyChanges();
+            
         }
 
         protected override void UnloadContent()
@@ -60,6 +76,11 @@ namespace XNAGameEngine
             foreach (GameObject tester in TESTERS)
                 tester.Update(gameTime);
 
+            fps.Update(gameTime);
+            myMouse.Update(gameTime);
+
+            //Debugger
+            debug.PushBack(myMouse.position.ToString(), 100, 100);
             base.Update(gameTime);
         }
 
@@ -72,6 +93,9 @@ namespace XNAGameEngine
             foreach (GameObject obj in TESTERS)
                 obj.Draw();
 
+            fps.Draw(gameTime);
+            debug.Draw();
+            myMouse.Draw();
             gameInterface.spriteBatch.End();
             base.Draw(gameTime);
         }

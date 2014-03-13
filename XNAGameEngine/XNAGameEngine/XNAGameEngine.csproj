@@ -109,8 +109,11 @@
   <ItemGroup>
     <Compile Include="Animation.cs" />
     <Compile Include="CollisionManager.cs" />
+    <Compile Include="Debug.cs" />
+    <Compile Include="FpsManager.cs" />
     <Compile Include="GameInterface.cs" />
     <Compile Include="GameObject.cs" />
+    <Compile Include="Mouse.cs" />
     <Compile Include="PhysicsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
@@ -120,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChangeLog.txt" />
+    <Content Include="FPS Notes.txt" />
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
