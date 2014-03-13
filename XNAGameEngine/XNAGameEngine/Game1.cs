@@ -57,7 +57,6 @@ namespace XNAGameEngine
                 if (Event != null)
                     PhysicsManager.Collision(Event.object1, Event.object2);
 
-
             foreach (GameObject tester in TESTERS)
                 tester.Update(gameTime);
 

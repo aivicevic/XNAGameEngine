@@ -26,6 +26,11 @@ namespace XNAGameEngine
             _mass = 1;
         }
 
+        public PhysicsManager()
+        {
+
+        }
+
         public void SetVel(float x, float y)
         {
             _vel = new Vector2(x, y);
@@ -54,7 +59,7 @@ namespace XNAGameEngine
             Vector2 v2_t = Vector2.Multiply(n_tc, o2_t);
 
             o1.vel = v1_c + v1_t;
-            o2.vel = v2_c + v2_t;
+            //o2.vel = v2_c + v2_t;
             return new PhysicsEvent(o1.vel, o2.vel);
 
 
