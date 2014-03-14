@@ -70,14 +70,15 @@ namespace XNAGameEngine
                 tester.Update(gameTime);
 
             //Input Logic
-            if(gameInterface.inputManager["Esc"].IsDown)
+            if (gameInterface.inputManager["Quit"].IsDown)
                 this.Exit();
-            
+        
             gameInterface.Update(gameTime);
 
             //Debugger
             Debug.PushBack(Mouse.GetState().X.ToString() + ", " +
                            Mouse.GetState().Y.ToString());
+            Debug.PushBack("Test1");
 
             base.Update(gameTime);
         }

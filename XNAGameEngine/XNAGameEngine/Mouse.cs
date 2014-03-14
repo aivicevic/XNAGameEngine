@@ -12,30 +12,29 @@ namespace XNAGameEngine
 {
     class GameMouse
     {
-       
-
+        public string _Name;
         private MouseState _mouse;
         private Sprite _sprite;
         private Animation _animation;
+        public enum MouseButtons { Left, Right, Middle };
+        private readonly IDictionary<MouseButtons, Func<MouseState, ButtonState>> _mouseButtonMaps;
 
-        public MouseState getMouse { get { return _mouse; } set { _mouse = value; } }
-
-        public GameMouse(GameInterface gi, string file)
+        public GameMouse( GameInterface gi, string file)
         {
             _sprite = new Sprite(gi, file);
-            _animation = new Animation(new Vector2(1, 1), 100, _sprite);   
-           
+            _animation = new Animation(new Vector2(1, 1), 100, _sprite);
+            _mouseButtonMaps = new Dictionary<MouseButtons, Func<MouseState, ButtonState>>
+			{
+				{ MouseButtons.Left, s => s.LeftButton },
+				{ MouseButtons.Right, s => s.RightButton },
+				{ MouseButtons.Middle, s => s.MiddleButton },
+			};
         }
 
         public void Update(GameTime time)
         {
             _mouse = Mouse.GetState();
             _sprite.position = new Vector2(_mouse.X , _mouse.Y );
-        }
-
-        public Vector2 CurrentPosition()
-        {
-            return _sprite.position;
         }
 
         public void Draw()

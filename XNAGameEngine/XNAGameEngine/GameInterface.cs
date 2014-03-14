@@ -62,12 +62,15 @@ namespace XNAGameEngine
             fps.Draw();
         }
 
-        void AddInput()
-        {
-            inputManager.AddEvent("Esc");           //Add name of event
-            inputManager["Esc"].Add(Keys.Escape);   //Add corresponding key
-            // Add game logic in Game1 (will be changing this obviously)
-            
+        private void AddInput()
+        {   //Event Name                    //Corresponding Key
+            inputManager.AddEvent("Quit");  inputManager["Quit"].Add(Keys.Escape);
+            inputManager.AddEvent("Menu");  inputManager["Menu"].Add(Keys.M);
+            inputManager.AddEvent("Pause"); inputManager["Pause"].Add(Keys.P);
+            inputManager.AddEvent("Left");  inputManager["Left"].Add(Keys.A);
+            inputManager.AddEvent("Right"); inputManager["Right"].Add(Keys.D);
+            inputManager.AddEvent("Up");    inputManager["Up"].Add(Keys.W);
+            inputManager.AddEvent("Down");  inputManager["Down"].Add(Keys.S);
         }
 
     }

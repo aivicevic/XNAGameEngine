@@ -22,8 +22,8 @@ Project File Responsibility
 - GameOject.cs
 - GameInterface.cs
 - Program.cs
-Current Assignments: Input Manager
-Previous Assignments: GameMouse, FPS Manager, Debugger
+Current Assignments:
+Previous Assignments:  InputEvent, InputManager ,GameMouse, FPS Manager, Debugger
 
 - Visual / Audio Designer
 Eric Flowers - Flowers61 - Cell: 951-973-8308
@@ -63,6 +63,14 @@ Current Assignment: GameDesign
 // -Notes: Collision is up and running. This is an un-optimized version //
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
+
+XNAGameEngine | Michael | 3/14/2014
+-Event.cs - GameInterface.cs - InputManger.cs - Mouse.cs
+-Time 6:00pm - 12:39 am = 6:39 (With Long Breaks)
+-Notes: Cleaned up Event and InputManager class. Event is now called InputEvent
+and is strictly for Keyboard input. Need better direction (Understanding)
+on how we will be using the mouse. If it is just point and click, there is 
+not much to it (GameMouse will suffice).
 
 XNAGameEngine | Hypo Klarich | 3/13/2014
 -CollisionManager.cs -Debug.cs -Gaame1.cs -GameObjects.cs -PhysicsManager.cs

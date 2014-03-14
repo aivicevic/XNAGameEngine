@@ -12,26 +12,27 @@ namespace XNAGameEngine
 {
      class InputManager
     {
-        private List<Event> _EVENT;
-        private GameMouse _mouse;
-        
-        public Event this[string eventName]
+        private List<InputEvent> _EVENT;
+        public  GameMouse _mouse;
+
+        public InputEvent this[string eventName]
         { 
             get
             { 
-                    return _EVENT.Find((Event a)=>{return a._name == eventName;});
+                    return _EVENT.Find((InputEvent a)=>{return a._Name == eventName;});
             }
         }
+      
         public InputManager(GameInterface gi)
         {
             _mouse = new GameMouse(gi, "Assets/Ship");
-            _EVENT = new List<Event>();
+            _EVENT = new List<InputEvent>();
         }
-        
+       
         public void AddEvent (string eventName)
         {
-            _EVENT.Add(new Event(this, eventName));
-        }
+            _EVENT.Add(new InputEvent(this, eventName));
+        }      
 
         public void Draw()
         {
@@ -40,14 +41,13 @@ namespace XNAGameEngine
         public void Update(GameTime gameTime)
         {
             KeyboardState kbState = Keyboard.GetState();
-            Mouse.GetState();
+            MouseState mState = Mouse.GetState();
 
-            foreach (Event a in _EVENT)
+            foreach (InputEvent a in _EVENT)
                 a.Update(kbState);
 
             _mouse.Update(gameTime);
         }
-
-        
+       
     }
 }
