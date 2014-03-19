@@ -53,16 +53,6 @@ Current Assignment: GameDesign
 
 //////////////////////////////////////////////////////////////////////////
 
-Code Naming Convention: 
-(use "name" as the variable/function/container name)
--Private Class variable:			_name
--Private Class member function :	_Name
--Private Class container:			_NAME
--Public Class variable:				name
--Public Class member function :		Name
--Public Class container:			NAME
-
-//////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////
 // Example Format --													//
@@ -73,11 +63,6 @@ Code Naming Convention:
 // -Notes: Collision is up and running. This is an un-optimized version //
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
-
-XNAGameEngine | Michael | 3/19/2014
--ChangeLog.txt
--Time 1:23 pm - 1:26 pm = :3
--Notes: Added Naming convention in this log
 
 XNAGameEngine | Hypo Klarich | 3/15/2014
 -CollisionManager.cs -Debug.cs -Gaame1.cs -GameObjects.cs -PhysicsManager.cs
