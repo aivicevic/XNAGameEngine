@@ -41,5 +41,7 @@ namespace XNAGameEngine
         {
             _sprite.Draw();
         }
+
+
     }
 }
