@@ -25,7 +25,7 @@ namespace XNAGameEngine
       
         public InputManager(GameInterface gi)
         {
-            _mouse = new GameMouse(gi, "Assets/Ship");
+            _mouse = new GameMouse(gi, "Assets/harpoon mouse");
             _EVENT = new List<InputEvent>();
         }
        

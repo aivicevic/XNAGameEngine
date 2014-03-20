@@ -13,7 +13,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace XNAGameEngine
 {
-    class GameStateManager
+    public class GameStateManager
     {
          #region Variables
 

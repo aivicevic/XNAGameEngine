@@ -75,6 +75,12 @@ Code Naming Convention:
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
+XNAGameEngine | Eric Flores | 3/20/2014
+-GameScreen.cs
+-Time 12:30 pm - 3:00 am = 2:30
+-Notes: Added the properties to GameScreen.cs still not finished with it but i
+did put comments in for what i have so far. Also i put the harpoon to the mouse.
+
 XNAGameEngine | Eric Flores | 3/19/2014
 -Assets -GameStateManager.cs -GameScreen.cs
 -Time 10:00 pm - 10:40 am = :40
