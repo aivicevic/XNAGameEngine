@@ -42,6 +42,8 @@ namespace XNAGameEngine
             PhysicsManager o1 = obj.physics;
             PhysicsManager o2 = obj2.physics;
 
+            
+
             Vector2 n_c = Vector2.Normalize(o1.pos - o2.pos);
             Vector2 n_tc = new Vector2(n_c.Y * -1, n_c.X);
 

@@ -53,6 +53,17 @@ Current Assignment: GameDesign
 
 //////////////////////////////////////////////////////////////////////////
 
+Code Naming Convention: 
+(use "name" as the variable/function/container name)
+-Private Class variable:			_name
+-Private Class member function :	_Name
+-Private Class container:			_NAME
+-Public Class variable:				name
+-Public Class member function :		Name
+-Public Class container:			NAME
+
+//////////////////////////////////////////////////////////////////////////
+
 
 //////////////////////////////////////////////////////////////////////////
 // Example Format --													//
