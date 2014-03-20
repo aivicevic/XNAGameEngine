@@ -75,6 +75,13 @@ Code Naming Convention:
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
+XNAGameEngine | Eric Flores | 3/19/2014
+-Assets -GameStateManager.cs -GameScreen.cs
+-Time 10:00 pm - 10:40 am = :40
+-Notes: Added art to Assets folder. Added 2 new class GameStateManager.cs and
+GameScreen.cs just setting up and messing around with ideas neither works with
+the code YET.
+
 XNAGameEngine | Hypo Klarich | 3/15/2014
 -CollisionManager.cs -Debug.cs -Gaame1.cs -GameObjects.cs -PhysicsManager.cs
 -Time 11:00 am - 11:20 am = :20
