@@ -14,7 +14,8 @@ Project File Responsibility
 - GameInterface.cs
 - CollisionManager.cs
 - PhysicsManager.cs
-Current Assignments: Physics and Movement
+Current Assignments: System Stability and optimization
+Previous Assignments: Physics and Movement
 
 - System Designer
 Mike Villar - macv101 - Cell: 714-869-6646
@@ -22,28 +23,46 @@ Project File Responsibility
 - GameOject.cs
 - GameInterface.cs
 - Program.cs
+- InputEvent.cs
+- InputManager.cs
+- FpsManager.cs
+- Debug.cs
 Current Assignments:
 Previous Assignments:  InputEvent, InputManager ,GameMouse, FPS Manager, Debugger
 
 - Visual / Audio Designer
 Eric Flowers - Flowers61 - Cell: 951-973-8308
 Project File Responsibility
+- /Assets
 - Animation.cs
 - Sprite.cs
-Current Assignments: SoundManager
+Current Assignments: SoundManager, ScreenManager
+Previous Assignments: 
 
 - Interface Designer
 Jacqulyn Wong - MistressRuri - Cell: 209-814-5446
 Project File Responsibility
 - Program.cs
 - Game1.cs
-Current Assignments: Screen Manager, Interface
+Current Assignments: Phyisics, Collision
+Previous Assignments: ScreenManager
 
 - Gameplay Designer
 Wasiem - arabwes - Cell: 313-234-3263
 Project File Responsibility
 - Game1.cs
 Current Assignment: GameDesign
+Previous Assignments: 
+
+- Interface Designer
+Chase Arenella - carenella1 - Cell: 949-460-3446
+Project File Responsibility
+- GameInterface.cs
+- Game1.cs
+- GameScreen.cs
+- GameStateManager.cs
+Current Assignment: Create Levels, Intro Splash Screen, Credits
+Previous Assignments: 
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -74,6 +93,23 @@ Code Naming Convention:
 // -Notes: Collision is up and running. This is an un-optimized version //
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
+
+XNAGameEngine | Eric Flores | 3/20/2014
+-GameScreen.cs
+-Time 12:30 pm - 3:00 am = 2:30
+-Notes: Added the properties to GameScreen.cs still not finished with it but i
+did put comments in for what i have so far. Also i put the harpoon to the mouse.
+
+XNAGameEngine | Hypo Klarich | 3/20/2014
+-ChangeLog.txt
+-Time 11:30 am - 11:50 am = :20
+-Notes: Check your assignements and file responcibility, if you don't know 
+what you should be working on its listed under your name there.
+
+XNAGameEngine | Chase Arenella | 3/20/2014
+-ChangeLog.txt
+-Time 9:37 am - 9:47 am = :10
+-Notes: Synced up with 2013 and github I am now on the project.
 
 XNAGameEngine | Eric Flores | 3/19/2014
 -Assets -GameStateManager.cs -GameScreen.cs
