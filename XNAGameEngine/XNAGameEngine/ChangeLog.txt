@@ -75,6 +75,12 @@ Code Naming Convention:
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
+
+XNAGameEngine | Chase Arenella | 3/20/2014
+-ChangeLog.txt
+-Time 9:37 am - 9:47 am = :10
+-Notes: Synced up with 2013 and github I am now on the project.
+
 XNAGameEngine | Eric Flores | 3/19/2014
 -Assets -GameStateManager.cs -GameScreen.cs
 -Time 10:00 pm - 10:40 am = :40
