@@ -28,7 +28,7 @@ Project File Responsibility
 - FpsManager.cs
 - Debug.cs
 Current Assignments:
-Previous Assignments:  InputEvent, InputManager ,GameMouse, FPS Manager, Debugger
+Previous Assignments: InputEvent, InputManager, GameMouse, FPS Manager, Debugger
 
 - Visual / Audio Designer
 Eric Flowers - Flowers61 - Cell: 951-973-8308
@@ -44,7 +44,7 @@ Jacqulyn Wong - MistressRuri - Cell: 209-814-5446
 Project File Responsibility
 - Program.cs
 - Game1.cs
-Current Assignments: Phyisics, Collision
+Current Assignments: Physics, Collision
 Previous Assignments: ScreenManager
 
 - Gameplay Designer
@@ -89,43 +89,49 @@ Code Naming Convention:
 //////////////////////////////////////////////////////////////////////////
 // XNAGameEngine | Hypo Klarich | 3/11/2014								//
 // -CollisionManager.cs -Game1.cs -GameInterface.cs -GameObject.cs		//
-// -Time: 11am - 1:38pm = 2:38											//
+// -Time: 11:00am - 1:38pm = 2:38										//
 // -Notes: Collision is up and running. This is an un-optimized version //
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
+XNAGameEngine | Jacqulyn Wong | 3/20/2014
+-PhysicsManager.cs
+-Time: 9:00pm - 10:00pm = 1:00
+-Notes: Messed with the physics. I think they all collide now, but they just
+ram into each other. Maybe it's their difference in velocites now.
+
 XNAGameEngine | Eric Flores | 3/20/2014
 -GameScreen.cs
--Time 12:30 pm - 3:00 am = 2:30
+-Time: 12:30pm - 3:00pm = 2:30
 -Notes: Added the properties to GameScreen.cs still not finished with it but i
 did put comments in for what i have so far. Also i put the harpoon to the mouse.
 
 XNAGameEngine | Hypo Klarich | 3/20/2014
 -ChangeLog.txt
--Time 11:30 am - 11:50 am = :20
+-Time: 11:30am - 11:50am = 0:20
 -Notes: Check your assignements and file responcibility, if you don't know 
 what you should be working on its listed under your name there.
 
 XNAGameEngine | Chase Arenella | 3/20/2014
 -ChangeLog.txt
--Time 9:37 am - 9:47 am = :10
+-Time: 9:37am - 9:47am = 0:10
 -Notes: Synced up with 2013 and github I am now on the project.
 
 XNAGameEngine | Eric Flores | 3/19/2014
 -Assets -GameStateManager.cs -GameScreen.cs
--Time 10:00 pm - 10:40 am = :40
+-Time: 10:00pm - 10:40pm = 0:40
 -Notes: Added art to Assets folder. Added 2 new class GameStateManager.cs and
 GameScreen.cs just setting up and messing around with ideas neither works with
 the code YET.
 
 XNAGameEngine | Hypo Klarich | 3/15/2014
 -CollisionManager.cs -Debug.cs -Gaame1.cs -GameObjects.cs -PhysicsManager.cs
--Time 11:00 am - 11:20 am = :20
+-Time: 11:00am - 11:20am = 0:20
 -Notes: Worked on collision no changes...
 
 XNAGameEngine | Michael | 3/14/2014
 -Event.cs - GameInterface.cs - InputManger.cs - Mouse.cs
--Time 6:00pm - 12:39 am = 6:39 (With Long Breaks)
+-Time: 6:00pm - 12:39am = 6:39 (With Long Breaks)
 -Notes: Cleaned up Event and InputManager class. Event is now called InputEvent
 and is strictly for Keyboard input. Need better direction (Understanding)
 on how we will be using the mouse. If it is just point and click, there is 
@@ -133,21 +139,21 @@ not much to it (GameMouse will suffice).
 
 XNAGameEngine | Hypo Klarich | 3/13/2014
 -CollisionManager.cs -Debug.cs -Gaame1.cs -GameObjects.cs -PhysicsManager.cs
--Time 9:30 am - 11:12 am = 1:42
+-Time: 9:30am - 11:12am = 1:42
 -Notes: Drasticaly improved the collision, still some problems that have been
 identified but not solved. Made changes to the debugger so it would no longer 
 need a position, that is calculated and stored staticly. 
 
 XNAGameEngine | Michael Villar | 3/13/2014
 -Game1.cs - GameInterface.cs - Mouse.cs - InputManger.cs (NEW)
--Time 10:30 pm - 1:16 am = 2:44
+-Time: 10:30pm - 1:16am = 2:44
 -Notes: Created an InputManager class. Able to add different events
 in the GameInterface class with it. Also placed GameMouse within it.
 Still need to clean it up and review design. 
 
 XNAGameEngine | Hypo Klarich | 3/12/2014
 -FpsManager.cs -Game1.cs -GameInterface.cs -Mouse.cs -Debug.cs
--Time 8:00 pm - 10:02 pm = 2:02
+-Time: 8:00pm - 10:02pm = 2:02
 -Notes: You did a great job Mike, however I went through and hid a lot
 of your code. I moved both the debugger and the FPS into the Gameinterface
 as well as, completely seperated the FPS from the Debugger. Mouse got moved
@@ -180,31 +186,31 @@ XNAGameEngine | Michael Villar | 3/12/2014
 
 XNAGameEngine | Michael Villar | 3/12/2014								
  -(New) FpsManager.cs - Debug.cs		
- -Time: 1:08am - 1:30am = :22											
+ -Time: 1:08am - 1:30am = 0:22											
  -Notes: Fixed variables and functions to fit the standard coding 
  conventions. Added an empty class called FpsManager.cs
 
 XNAGameEngine | Michael Villar | 3/11/2014								
  -(New) Debug.cs - Game1.cs		
- -Time: 12pm - 1:08am = 1:08											
+ -Time: 12:00pm - 1:08am = 1:08											
  -Notes: Debugger is good to go. Used exact same way as previous games.
  Open Debug.spritefont (Content) to change font attributes. This will
  make the default font.	
 
 XNAGameEngine | Hypo Klarich | 3/11/2014								
  -CollisionManager.cs -Game1.cs -GameInterface.cs -GameObject.cs		
- -Time: 11am - 1:38pm = 2:38											
+ -Time: 11:00am - 1:38pm = 2:38											
  -Notes: Collision is up and running. This is an un-optimized version 
 	 but is good enough for our first few projects.	
 
 XNAGameEngine | Hypo Klarich | 3/11/2014
 -CollisionManager.cs -Game1.cs -PhysicsManager.cs
--Time 6:00 pm - 8:20pm = 2:20
+-Time: 6:00pm - 8:20pm = 2:20
 -Notes: Added Physics to the game objects and broke the physics quite
 	spectacularly. I'll get it fixed but it's not a top priority
 
 XNAGameEngine | Hypo Klarich | 3/11/2014
 -CollisionManager.cs -Game1.cs -PhysicsManager.cs
--Time 8:30 pm - 9:30pm = 1:10
+-Time: 8:30pm - 9:30pm = 1:10
 -Notes: Fixed the Physics and broke it some more...
 

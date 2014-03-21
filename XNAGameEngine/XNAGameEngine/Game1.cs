@@ -61,7 +61,7 @@ namespace XNAGameEngine
                 this.Exit();
 
             // TODO: Add your update logic here
-            for (int i = TESTERS.Count(); i < 2; i++)
+            for (int i = TESTERS.Count(); i < 5; i++)
                 TESTERS.AddLast(new TestObject(gameInterface));
 
             CollisionManager.Check(TESTERS);
