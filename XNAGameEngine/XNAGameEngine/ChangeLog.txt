@@ -94,6 +94,13 @@ Code Naming Convention:
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
+XNAGameEngine | Hypo Klarich | 3/20/2014
+-Game1.cs -PhysicsManager.cs
+-Time: 10:00 pm - 10:45 pm = 0:45
+-Notes: Broke Jacqulyns physics so that it look the same as the odd one
+but i think I found the root of the problem so there might me a real solution
+soon.
+
 XNAGameEngine | Jacqulyn Wong | 3/20/2014
 -PhysicsManager.cs
 -Time: 9:00pm - 10:00pm = 1:00

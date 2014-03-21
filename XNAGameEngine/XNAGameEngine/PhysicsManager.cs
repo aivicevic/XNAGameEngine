@@ -42,6 +42,7 @@ namespace XNAGameEngine
             PhysicsManager o1 = obj.physics;
             PhysicsManager o2 = obj2.physics;
 
+            Vector2 vect = (o2.pos - o1.pos);
             //Normal vector.
             Vector2 nVec = Vector2.Normalize(o2.pos - o1.pos);
             //Magnitude of nVec.
@@ -59,13 +60,13 @@ namespace XNAGameEngine
             float o2_stV = Vector2.Dot(utVec, o2.vel);
 
             //Final scalar velocities in normal direction.
-            o1_snV = ((o1_snV * (o1.mass - o2.mass)) + (2 * o2.mass * o2_snV)) / (o1.mass + o2.mass);
-            o2_snV = ((o2_snV * (o2.mass - o1.mass)) + (2 * o1.mass * o1_snV)) / (o1.mass + o2.mass);
+            float fo1_snV = ((o1_snV * (o1.mass - o2.mass)) + (2 * o2.mass * o2_snV)) / (o1.mass + o2.mass);
+            float fo2_snV = ((o2_snV * (o2.mass - o1.mass)) + (2 * o1.mass * o1_snV)) / (o1.mass + o2.mass);
 
             //Scalar to vector conversion for velocities.
-            Vector2 snV_1 = Vector2.Multiply(unVec, o1_snV);
+            Vector2 snV_1 = Vector2.Multiply(unVec, fo1_snV);
             Vector2 stV_1 = Vector2.Multiply(utVec, o1_stV);
-            Vector2 snV_2 = Vector2.Multiply(unVec, o2_snV);
+            Vector2 snV_2 = Vector2.Multiply(unVec, fo2_snV);
             Vector2 stV_2 = Vector2.Multiply(utVec, o2_stV);
 
             //Final velocity vectors.
