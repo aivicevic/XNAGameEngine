@@ -27,7 +27,7 @@ Project File Responsibility
 - InputManager.cs
 - FpsManager.cs
 - Debug.cs
-Current Assignments:
+Current Assignments: ScreenManager
 Previous Assignments: InputEvent, InputManager, GameMouse, FPS Manager, Debugger
 
 - Visual / Audio Designer
@@ -36,16 +36,16 @@ Project File Responsibility
 - /Assets
 - Animation.cs
 - Sprite.cs
-Current Assignments: SoundManager, ScreenManager
-Previous Assignments: 
+Current Assignments: Redesign Animation
+Previous Assignments: SoundManager, ScreenManager
 
 - Interface Designer
 Jacqulyn Wong - MistressRuri - Cell: 209-814-5446
 Project File Responsibility
 - Program.cs
 - Game1.cs
-Current Assignments: Physics, Collision
-Previous Assignments: ScreenManager
+Current Assignments: Waypoints
+Previous Assignments: Physics, Collision
 
 - Gameplay Designer
 Wasiem - arabwes - Cell: 313-234-3263
@@ -61,7 +61,7 @@ Project File Responsibility
 - Game1.cs
 - GameScreen.cs
 - GameStateManager.cs
-Current Assignment: Create Levels, Intro Splash Screen, Credits
+Current Assignment: ScreenManager
 Previous Assignments: 
 
 //////////////////////////////////////////////////////////////////////////
