@@ -98,7 +98,7 @@ XNAGameEngine | Jacqulyn Wong | 3/20/2014
 -PhysicsManager.cs
 -Time: 9:00pm - 10:00pm = 1:00
 -Notes: Messed with the physics. I think they all collide now, but they just
-ram into each other. Maybe it's their difference in velocites now.
+ram into each other. Maybe it's their difference in velocities now.
 
 XNAGameEngine | Eric Flores | 3/20/2014
 -GameScreen.cs
