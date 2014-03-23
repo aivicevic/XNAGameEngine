@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Content;
 
 namespace XNAGameEngine
 {
-    class GameObject
+    public class GameObject
     {
         private Sprite _sprite;
         private Animation _animation;

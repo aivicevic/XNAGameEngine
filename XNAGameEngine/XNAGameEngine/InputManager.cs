@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace XNAGameEngine
 {
-    class InputManager
+    public class InputManager
     {
         private List<InputEvent> _EVENT;
         public GameMouse _mouse;
@@ -50,7 +50,7 @@ namespace XNAGameEngine
         }
     }
 
-    class InputEvent
+    public class InputEvent
     {
         public string _Name;
 

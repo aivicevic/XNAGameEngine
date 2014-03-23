@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace XNAGameEngine
 {
-    class GameInterface
+    public class GameInterface
     {
         private Game1 _game;
 
@@ -32,11 +32,17 @@ namespace XNAGameEngine
             _game.Content.RootDirectory = "Content";
         }
 
-        public void InitGraphicsDeviceManager() { graphicsDeviceManager = new GraphicsDeviceManager(_game); }
+        public void InitGraphicsDeviceManager() 
+        { 
+            graphicsDeviceManager = new GraphicsDeviceManager(_game);
+            graphicsDeviceManager.PreferredBackBufferHeight = 900;
+            graphicsDeviceManager.PreferredBackBufferWidth = 1200;
+        }
         public void InitCollision() { collisionManager = new CollisionManager(); }
 
         public void LoadGameInterface()
         {
+            
             inputManager = new InputManager(this);
             AddInput();
             debug = new Debug(Content, spriteBatch);
@@ -51,6 +57,7 @@ namespace XNAGameEngine
 
         public void Update(GameTime gameTime)
         {
+            
             inputManager.Update(gameTime);
             fps.Update(gameTime);
         }

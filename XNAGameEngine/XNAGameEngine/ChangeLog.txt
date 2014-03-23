@@ -95,6 +95,18 @@ Code Naming Convention:
 //////////////////////////////////////////////////////////////////////////
 
 XNAGameEngine | Hypo Klarich | 3/20/2014
+-EveryClass was tweaked
+-Time: 7:00 pm - 11:30 pm = 4:30
+-Notes: Looked over the gamescreen class and changed the name to Screen. 
+Also added 3 new classes, SplashScreen, GameScreen, MenuScreen. For many
+of the major classes (pratically all) I made them all public for easy use,
+this can be fixed later if needed. Also, added a background class to test
+the GameStateManager. I'm still confused in regards to the enum ScreenState.
+The GameStateManager is in Game1 class and uses gameInterface as a parameter,
+still wondering if thats the best way. Look at the GameStateMaanger, Splash-
+Screen, Screen and Game1 class for the major code. 
+
+XNAGameEngine | Hypo Klarich | 3/20/2014
 -Game1.cs -PhysicsManager.cs
 -Time: 10:00 pm - 10:45 pm = 0:45
 -Notes: Broke Jacqulyns physics so that it look the same as the odd one

@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace XNAGameEngine
 {
-    class GameMouse
+    public class GameMouse
     {
         public string _Name;
         private MouseState _mouse;

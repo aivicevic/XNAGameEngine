@@ -108,11 +108,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation.cs" />
+    <Compile Include="Background.cs" />
     <Compile Include="CollisionManager.cs" />
     <Compile Include="Debug.cs" />
     <Compile Include="GameScreen.cs" />
+    <Compile Include="MenuScreen.cs" />
+    <Compile Include="Screen.cs" />
     <Compile Include="GameStateManager.cs" />
     <Compile Include="FpsManager.cs" />
+    <Compile Include="SplashScreen.cs" />
     <Compile Include="GameInterface.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="InputManager.cs" />

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace XNAGameEngine
 {
-    class GameScreen
+    class MenuScreen
     {
     }
 }

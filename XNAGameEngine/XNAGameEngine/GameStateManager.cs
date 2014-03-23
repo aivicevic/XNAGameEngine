@@ -20,15 +20,19 @@ namespace XNAGameEngine
         // creating custom contentmanager
         ContentManager content;
 
-        GameScreen currentScreen;
+        Screen currentScreen;
+        Screen newScreen;
 
-        GameScreen newScreen;
+        SplashScreen first, second;
+        MenuScreen menu, pause;
+        GameScreen Level1, Level2;
+        
 
         // Screenmanager instance
         private static GameStateManager instance;
 
         // Screen stack
-        Stack<GameScreen> screenStack = new Stack<GameScreen>();
+        Stack<Screen> screenStack = new Stack<Screen>();
 
         // screens width and height
         Vector2 dimensions;
@@ -57,7 +61,7 @@ namespace XNAGameEngine
 
         #region Main Methods
 
-        public void AddScreen(GameScreen screen)
+        public void AddScreen(Screen screen)
         {
             newScreen = screen;
             screenStack.Push(screen);
@@ -68,22 +72,29 @@ namespace XNAGameEngine
 
         public void Initialize()
         {
-           // currentScreen = new SplashScreen();
+            currentScreen = first;
+            currentScreen = new SplashScreen();
         }
-        public void LoadContent(ContentManager Content)
+        public void LoadContent(GameInterface gi)
         {
-            content = new ContentManager(Content.ServiceProvider, "Content");
-            //currentScreen.LoadContent(Content);
+            content = new ContentManager(gi.Content.ServiceProvider, "Content");
+           currentScreen.LoadContent(gi, "BackGround/Bg1", false);
         }
         public void Update(GameTime gameTime)
         {
-            //currentScreen.Update(gameTime);
+            currentScreen.Update(gameTime);
         }
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw()
         {
-            //currentScreen.Draw(spriteBatch);
+            currentScreen.Draw();
         }
-
         #endregion
+
+      
+
+        private void DeleteSplash()
+        {
+
+        }
     }
 }

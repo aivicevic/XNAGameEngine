@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 namespace XNAGameEngine
 {
-    class FpsManager
+    public class FpsManager
     {
         /*If _totalFrames++ is placed in:
          * Draw - measures sync between back buffer with refresh rate of monitor 

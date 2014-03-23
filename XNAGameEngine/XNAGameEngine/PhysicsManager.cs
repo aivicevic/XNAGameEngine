@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace XNAGameEngine
 {
-    class PhysicsManager
+    public class PhysicsManager
     {
         private Vector2 _pos;
         private Vector2 _vel;

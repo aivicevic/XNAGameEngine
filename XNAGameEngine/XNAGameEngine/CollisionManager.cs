@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace XNAGameEngine
 {
-    class CollisionManager
+    public class CollisionManager
     {
         private LinkedList<GameObject> _KILLBOX;
 
