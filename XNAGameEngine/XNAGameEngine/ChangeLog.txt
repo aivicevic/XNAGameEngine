@@ -94,6 +94,17 @@ Code Naming Convention:
 // but is good enough for our first few projects.						//
 //////////////////////////////////////////////////////////////////////////
 
+XNAGameEngine | Eric Flores | 3/23/2014
+-Animation.cs
+-Time: 11:30am - 12:30pm = 1:00
+-Notes: I did not complately rewrite the Animation class i just added a
+startFrame, an endFrame, and a bool continuouse i put all in the constructor.
+The start and end frames i think speak for themselves they just tell us where 
+to start and where to end. continuouse i thought would be a good feature to add
+in case we have anything that just constantly animates it will just cycle through.
+and the i edited the private helper function _NextFrame() to support the newly added
+properties. I dont have time to test it please look it over and if you want test it. 
+
 XNAGameEngine | Hypo Klarich | 3/20/2014
 -EveryClass was tweaked
 -Time: 7:00 pm - 11:30 pm = 4:30
